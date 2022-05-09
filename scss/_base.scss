@@ -1,0 +1,74 @@
+@use "mixin" as *;
+
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+// VARIABLES -------------------------------------------------
+// BREAK POINTS
+$bp-mobile: 23.5em; //375px
+$bp-desktop: 90em; //1440px
+
+// COLORS
+$color-primary-blue: hsl(246, 80%, 60%);
+$color-work: hsl(15, 100%, 70%);
+$color-play: hsl(195, 74%, 62%);
+$color-study: hsl(348, 100%, 68%);
+$color-exercise: hsl(145, 58%, 55%);
+$color-social: hsl(264, 64%, 52%);
+$color-self-care: hsl(43, 84%, 65%);
+
+$color-blue-1: hsl(236, 100%, 87%);
+$color-blue-2: hsl(235, 45%, 61%);
+$color-blue-3: hsl(235, 46%, 20%);
+$color-blue-4: hsl(226, 43%, 10%);
+
+// FONT
+$font-display: "Rubik", sans-serif;
+
+$fw-1: 300;
+$fw-2: 400;
+$fw-3: 500;
+
+// BORDER
+$border-radius: 15px;
+
+// GENERAL SETTING-------------------------------------------------
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: inherit;
+  list-style: none;
+  vertical-align: middle;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+
+  padding-block: 5rem;
+
+  background-color: $color-blue-4;
+
+  color: $color-blue-1;
+  font-family: $font-display;
+
+  @include for-desktop {
+    min-height: 100vh;
+    align-items: center;
+  }
+}
+
+.sr-only {
+  display: none;
+}
+
+.active {
+  color: #fff;
+}
